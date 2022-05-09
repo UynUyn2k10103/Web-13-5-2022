@@ -1,0 +1,8 @@
+
+- import project vào Spring Tool Suite or eclipse ( có install lombok nhá, vì mình ko dùng get/set mà dùng tv lombok).
+ 
+- tạo mới csdl : pav_shop -> import file pav_shop.sql vào mysql (workbench 8.0 >).
+
+- tài khoản admin:  tk:admin123 pass: 123123
+
+* chúc bạn có trải nghiệm thú vị. tks!*
