@@ -6,9 +6,9 @@
 </head>
 <body>
 <th:block th:fragment= "header">
-<header>
-    <div class="sticky">
-      <div class="container"> 
+<header style="padding: 0px 0px; margin: 0px 0px">
+    <div class="sticky" style="background-color: white;">
+      <div class="container" style="margin-left: 50px;"> 
         <!-- Logo -->
         <div class="logo"> <a th:href="@{/}"><span style="color: red; font-size: 30px;">FASHION SHOP</span></a> </div>
         <nav class="navbar ownmenu">
@@ -18,7 +18,7 @@
           <!-- NAV -->
           <div class="collapse navbar-collapse" id="nav-open-btn">
             <ul class="nav">
-              <li class="active"> <a th:href="@{/}">Trang chủ </a> </li>
+              <li> <a th:href="@{/}">Trang chủ </a> </li>
               <li> <a th:href="@{/products}">Sản phẩm</a> </li>
               <!-- MEGA MENU -->
               <th:block th:unless="${#request.remoteUser}">
@@ -30,7 +30,7 @@
           </div>
           
           <!-- Nav Right -->
-          <div class="nav-right">
+          <div class="nav-right" style="margin-right: -150px">
             <ul class="navbar-right">
               
               <!-- USER INFO -->
@@ -49,7 +49,7 @@
               <!-- USER BASKET -->
               <li class="dropdown user-basket">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-              	<i class="icon-basket-loaded"></i><small style="background-color: yellow; font-weight: bolder;">
+              	<i class="icon-basket-loaded"></i><small style ="font-weight: bolder;">
               		<th:block th:if="cartItems != null">
               			([[${totalCartItems}]])
               		</th:block>
@@ -102,10 +102,11 @@
                 <div > 
                     <div  >
                       <form th:action="@{/searchProduct}">
-                        <input name="keyword" th:value="${keyword}" style="width: 300px; height: 50px; background-color: rgb(255, 255, 255); color: black;"
-                        type="search" placeholder="Nhập từ khóa cần tìm ..."
+                        <input name="keyword" th:value="${keyword}" style="width: 200px;height: 40px;background-color: rgb(255, 255, 255);color: black;
+    margin-top: -70px;padding: 5px 10px;border-style: none;background-color: #8080804d;outline: none; "
+                        type="search" placeholder="Tìm sản phẩm"
                         >
-                        	<button type="submit"><i class="icon-check"></i></button>
+                        	<button type="submit" ><i class="icon-check" style="color: red;" ></i></button>
                         </input>
           
                       </form>
@@ -117,7 +118,7 @@
         </nav>
       </div>
     </div>
-  </header>
+  </header >
 </th:block>
 </body>
 </html>

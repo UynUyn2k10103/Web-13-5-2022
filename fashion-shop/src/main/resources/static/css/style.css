@@ -36,6 +36,94 @@ body
 	margin: 0px;
 	padding: 0px;
 }
+
+
+/* Nút Để Mở Chatbox */
+ .nut-mo-chatbox {
+   background-color: #555;
+   color: white;
+   padding: 16px 20px;
+   border: none;
+   cursor: pointer;
+   opacity: 0.8;
+   position: fixed;
+   bottom: 23px;
+   right: 28px;
+   width: 280px;
+ }
+/* Ẩn chatbox mặc định */
+ .Chatbox {
+   display: none;
+   position: fixed;
+   bottom: 0;
+   right: 15px;
+   border: 3px solid #f1f1f1;
+   z-index: 9;
+ }
+/* Thêm style cho form */
+ .form-container {
+   max-width: 300px;
+   padding: 10px;
+   background-color: white;
+ }
+/* thiết lập style textarea */
+ .form-container textarea {
+   width: 100%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   border: none;
+   background: #f1f1f1;
+   resize: none;
+   min-height: 200px;
+ }
+/*thiết lập style cho textarea khi được focus */
+ .form-container textarea:focus {
+   background-color: #ddd;
+   outline: none;
+ }
+/* Thiết lập style cho nút trong form*/
+ .form-container .btn {
+   background-color: #4CAF50;
+   color: white;
+   padding: 16px 20px;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   margin-bottom:10px;
+   opacity: 0.8;
+       font-size: 12px;
+ }/* Thiết lập màu nền cho nút đóng chatbox */
+ .form-container .nut-dong-chatbox {
+   background-color: red;
+ }
+/* Thêm hiệu ứng hover cho nút*/
+ .form-container .btn:hover, .nut-mo-chatbox:hover {
+   opacity: 1;
+ }
+input#fullname {
+    border-radius: 50px;
+}
+input#customerId {
+    border-radius: 50px;
+}
+input#email {
+    border-radius: 50px;
+}
+input#myPassRegister {
+    border-radius: 50px;
+}
+.form-input{
+	border-radius: 50px;
+}
+input[type="text"] {
+    border-radius: 50px;
+}
+input#myPass {
+    border-radius: 50px;
+}
+button.btn {
+    border-radius: 50px;
+}
 body {
 	background: #FFF;
 	font-weight: normal;
@@ -481,11 +569,11 @@ header .navbar li a:before {
 	margin: 0px auto;
 	position: absolute;
 	content: "";
-	height: 6px;
+	height: 30px;
 	left:0px;
-	top: 45%;
+	top: 20%;
 	z-index: -1;
-	background: #ffe115;
+	background: #004eff26;
 	-webkit-transition: 0.2s ease-in-out;
 	-moz-transition: 0.2s ease-in-out;
 	-ms-transition: 0.2s ease-in-out;
@@ -1500,7 +1588,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	line-height: 21px;
 }
 .papular-block .overlay {
-	background: rgba(255,255,21,0.75);
+	background: #FFB6C1;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -3368,7 +3456,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
       SUB BANNER
 ========================================================*/
 .sub-bnr {
-	background: url(../images/sub-bnr-bg.jpg) no-repeat;
+	background: url(../images/back.jpg) no-repeat;
 	background-size: cover !important;
 	min-height: 610px;
 	text-align: center;

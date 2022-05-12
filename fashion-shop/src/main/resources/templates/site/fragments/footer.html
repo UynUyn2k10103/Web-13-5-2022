@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
 </head>
+
 <body>
-<th:block th:fragment= "footer">
-	<footer>
-    <div class="container"> 
-      
-      <!-- ABOUT Location -->
-      <div class="col-md-3">
-        <div class="about-footer">
-        <p style="font-size: 20px; color: red;">SHOP THỜI TRANG</p>
-          <p><i class="icon-pointer"></i>Nguyễn Trãi, Hà Đông</p>
-           
-          <p><i class="icon-call-end"></i> 123456789</p>
-          <p><i class="icon-envelope"></i> thoitrangshop.com</p>
-        </div>
-      </div>
-      
-      
-      <!-- MY ACCOUNT -->
-      <div class="col-md-3">
-        <h6>Tài khoản </h6>
-        <ul class="link">
-          <li><a href="#."> Đăng nhập</a></li>
-          <li><a href="#."> Tài khoản</a></li>
-          <li><a href="#."> Giỏ hàng</a></li>
-        </ul>
-      </div>
-      
-      <!-- Rights -->
-      
-      <div class="rights">
-        <p>©  2022 SHOP THỜI TRANG </p>
-        <div class="scroll"> <a href="#wrap" class="go-up"><i class="lnr lnr-arrow-up"></i></a> </div>
-      </div>
-    </div>
-  </footer>
- </th:block>
+
+	<th:block th:fragment="footer">
+
+		<footer style="background: #21172717;position: relative;z-index: 1; color: black; padding: 20px 0px;">
+
+			<div class="container">
+			<button class="nut-mo-chatbox" style="bottom: 80px;width: 200px;border-radius: 5px;background-color: rgb(0 0 0 / 8%);">
+				<a href="https://www.facebook.com/messages/t/100015205605085" target="_blank">Contact by facebook</a>
+				</button>
+				<button class="nut-mo-chatbox" onclick="moForm()" style="bottom: 0px;width: 200px;border-radius: 5px;">Chat</button>
+				<div class="Chatbox" id="myForm">
+					<form action="" class="form-container">
+						<h1>Chatbox</h1>
+						<label for="msg"><b>Lời Nhắn</b></label>
+						<textarea placeholder="Bạn hãy nhập lời nhắn.." name="msg" ></textarea>
+						<button type="submit"  style="background-color: #eeb00ac7;border-radius: 5px;padding: 5px 25px; margin: 0px 40px">Gửi</button>
+						<button type="button"  style="background-color: #17bc27c7;border-radius: 5px;padding: 5px 20px;" onclick="dongForm()">Đóng</button>
+					</form>
+				</div>
+				<!-- ABOUT Location -->
+				<div style="display: flex;margin: 10px 10%; " >
+					<div >
+						<div class="about-footer" style="margin-right: 150px;">
+							<p style="font-size: 20px; color: red">SHOP THỜI TRANG</p>
+							<p><i class="icon-pointer"></i>Nguyễn Trãi, Hà Đông</p>
+							<p><i class="icon-call-end"></i> 123456789</p>
+							<p><i class="icon-envelope"></i> thoitrangshop.com</p>
+						</div>
+					</div>
+					<div >
+						<div class="about-footer" style="margin-right: 150px;">
+							<p style="font-size: 20px; color: red">THÔNG TIN CHUNG</p>
+							<p><i class="icon-pointer"></i>Đăng nhập</p>
+							<p><i class="icon-call-end"></i> Tài khoản</p>
+							<p><i class="icon-envelope"></i> Giỏ hàng</p>
+						</div>
+					</div>
+
+					<div >
+						<div class="about-footer" >
+							<p style="font-size: 20px; color: red">ĐỊA CHỈ LIÊN HỆ</p>
+							<p><i class="icon-pointer"></i>FaceBook</p>
+							<p><i class="icon-call-end"></i> Instagram</p>
+							<p><i class="icon-envelope"></i> Fanpage</p>
+						</div>
+					</div>
+					
+				</div >
+
+				<!-- Rights -->
+
+				<div class="rights" style="margin-top: -100px;">
+					<p>© 2022 SHOP THỜI TRANG </p>
+					<div class="scroll"> <a href="#wrap" class="go-up"><i class="lnr lnr-arrow-up"></i></a> </div>
+				</div>
+			</div>
+		</footer >
+ 
+	</th:block>
+	<script>
+		function moForm() {
+			document.getElementById("myForm").style.display = "block";
+		}
+		/*Hàm Đóng Form*/
+		function dongForm() {
+			document.getElementById("myForm").style.display = "none";
+		}
+	</script>
 </body>
+
 </html>
